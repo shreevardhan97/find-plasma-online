@@ -19,11 +19,11 @@ Users can open the app and either become a hero(share their details for donating
 
 In the project directory, you can run:
 
-### `yarn` or `npm install`
+#### `yarn` or `npm install`
 
 This will add the dependencies required to run the project.
 
-### `yarn start` or `npm start`
+#### `yarn start` or `npm start`
 
 This will start the project.
 
