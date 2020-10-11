@@ -13,15 +13,7 @@ Find Plasma Online is a mobile app designed to act as a tool that assists the co
 
 Users can open the app and either become a hero(share their details for donating) or ask for a hero's help. The details are matched and compatible donors' and recipients' contacts are shared with each other.
 
-```
 
-lodash
-react-navigation@4.0.10
-react-native-svg
-react-native-maps
-```
-
-These packages are included as dependencies in package.json file
 
 ## Steps to run project
 
