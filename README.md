@@ -14,9 +14,9 @@ Find Plasma Online is a mobile app designed to act as a tool that assists the co
 Users can open the app and either become a hero(share their details for donating) or ask for a hero's help. The details are matched and compatible donors' and recipients' contacts are shared with each other.
 
 ## Screenshots
-<img src="docs/ss1.jpg" width="300">
-<img src="docs/ss2.jpg" width="300">
-<img src="docs/ss3.jpg" width="300">
+<img src="ss1.png" width="300">
+<img src="ss2.png" width="300">
+<img src="ss3.png" width="300">
 
 
 
