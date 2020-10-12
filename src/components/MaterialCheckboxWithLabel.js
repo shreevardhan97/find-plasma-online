@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: 422,
     height: 31,
     fontFamily: "roboto-regular",
-    left: -10,
+    left: -166,
     top: 6,
     padding: 0
   }

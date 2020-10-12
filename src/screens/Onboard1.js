@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
 import Getstarted from "../components/Getstarted";
 
 function Onboard1(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.materialButtonViolet1Stack} onPress={() => this.props.navigation.navigate('Onboard2.js')}>
-        <Getstarted style={styles.materialButtonViolet1}   
- ></Getstarted>
-        <Getstarted style={styles.getStarted1_button} ></Getstarted>
+      <View style={styles.materialButtonViolet1Stack}>
+        <Getstarted style={styles.materialButtonViolet1}></Getstarted>
+        <Getstarted style={styles.getStarted1_button}></Getstarted>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Onboard2")}
+          style={styles.button2}
+        ></TouchableOpacity>
       </View>
       <Text style={styles.helpSaveLives1}>HELP SAVE LIVES</Text>
       <View style={styles.group1}>
@@ -47,14 +50,24 @@ const styles = StyleSheet.create({
   getStarted1_button: {
     height: 48,
     width: 207,
-    
+    position: "absolute",
+    left: 0,
+    top: 0
+  },
+  button2: {
+    top: 0,
+    left: 0,
+    width: 207,
+    height: 48,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
   },
   materialButtonViolet1Stack: {
     width: 207,
     height: 48,
     marginTop: 518,
-    marginLeft: 100,
-   
+    marginLeft: 77
   },
   helpSaveLives1: {
     fontFamily: "roboto-regular",
@@ -62,9 +75,7 @@ const styles = StyleSheet.create({
     height: 17,
     width: 360,
     textAlign: "center",
-    marginTop: -121,
-    marginLeft: 25
-    
+    marginTop: -121
   },
   group1: {
     width: 183,
@@ -84,25 +95,23 @@ const styles = StyleSheet.create({
   },
   plasma1: {
     top: 0,
-    left: 39,
+    left: 64,
     position: "absolute",
     fontFamily: "roboto-900",
     color: "rgba(21,0,53,1)",
     height: 40,
     width: 120,
-    fontSize: 36,
-    textAlign: "center"
+    fontSize: 36
   },
   find1Stack: {
     width: 184,
-    height: 40,
-    marginLeft: 50
+    height: 40
   },
   image1: {
     width: 166,
     height: 166,
     marginTop: -243,
-    marginLeft: 125
+    marginLeft: 97
   },
   group2: {
     width: 161,
@@ -124,8 +133,7 @@ const styles = StyleSheet.create({
   alreadyAMemberRow: {
     height: 17,
     flexDirection: "row",
-    flex: 1,
-    marginLeft: 25
+    flex: 1
   }
 });
 

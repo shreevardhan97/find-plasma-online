@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import EntypoIcon from "react-native-vector-icons/Entypo";
 import Requestcard from "../components/Requestcard";
@@ -8,12 +14,18 @@ import Heroescard from "../components/Heroescard";
 function Mainscreen(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.requestsStack}>
-        <Text style={styles.requests}>requests</Text>
+      <View style={styles.group2Stack}>
+        <View style={styles.group2}>
+          <Text style={styles.requests}>requests</Text>
+        </View>
         <MaterialCommunityIconsIcon
           name="plus-box"
           style={styles.icon}
         ></MaterialCommunityIconsIcon>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("FindAHero")}
+          style={styles.button}
+        ></TouchableOpacity>
       </View>
       <View style={styles.heroesStack}>
         <Text style={styles.heroes}>heroes</Text>
@@ -21,6 +33,10 @@ function Mainscreen(props) {
           name="plus-box"
           style={styles.icon1}
         ></MaterialCommunityIconsIcon>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("WhyBecomeAHero")}
+          style={styles.button2}
+        ></TouchableOpacity>
       </View>
       <View style={styles.group}>
         <View style={styles.icon2Stack}>
@@ -54,14 +70,15 @@ function Mainscreen(props) {
             <Heroescard style={styles.materialCardBasic}></Heroescard>
             <Heroescard
               b4="B+"
-              ryanGosling="Shreevardhan"
+              johnCena="John Cena"
               b4="O"
+              johnCena="Roman Reigns"
               style={styles.materialCardBasic1}
             ></Heroescard>
             <Heroescard
               b4="B+"
-              ryanGosling="Shreevardhan"
               b4="O"
+              johnCena="Shreevardhan"
               style={styles.materialCardBasic2}
             ></Heroescard>
           </View>
@@ -76,10 +93,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgba(255,255,255,1)"
   },
-  requests: {
+  group2: {
     top: 1,
     left: -1,
-    position: "absolute",
+    width: 171,
+    height: 42,
+    position: "absolute"
+  },
+  requests: {
     fontFamily: "roboto-900",
     color: "rgba(239,92,52,1)",
     height: 42,
@@ -93,9 +114,18 @@ const styles = StyleSheet.create({
     color: "rgba(239,92,52,1)",
     fontSize: 40
   },
-  requestsStack: {
+  button: {
+    top: 3,
+    left: 148,
+    width: 40,
+    height: 42,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
+  },
+  group2Stack: {
     width: 188,
-    height: 43,
+    height: 45,
     marginTop: 122,
     marginLeft: 32
   },
@@ -116,21 +146,31 @@ const styles = StyleSheet.create({
     color: "rgba(239,92,52,1)",
     fontSize: 40
   },
+  button2: {
+    top: 8,
+    left: 116,
+    width: 40,
+    height: 35,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
+  },
   heroesStack: {
     width: 171,
     height: 43,
-    marginTop: 217,
+    marginTop: 215,
     marginLeft: 32
   },
   group: {
     width: 141,
     height: 44,
+    alignSelf: "flex-end",
     marginTop: -386,
-    marginLeft: 270
+    marginRight: 9
   },
   icon2: {
     top: 0,
-    right: 10,
+    left: 101,
     position: "absolute",
     color: "rgba(21,0,53,1)",
     fontSize: 40

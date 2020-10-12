@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import NameFah from "../components/NameFah";
 import BloodGroupFah from "../components/BloodGroupFah";
 import PhoneFah from "../components/PhoneFah";
@@ -24,7 +24,13 @@ function FindAHero(props) {
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <SubmitFah style={styles.materialButtonViolet2}></SubmitFah>
+      <View style={styles.materialButtonViolet2Stack}>
+        <SubmitFah style={styles.materialButtonViolet2}></SubmitFah>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Mainscreen")}
+          style={styles.button}
+        ></TouchableOpacity>
+      </View>
       <MaterialUnderlineTextbox2
         style={styles.materialUnderlineTextbox2}
       ></MaterialUnderlineTextbox2>
@@ -70,10 +76,15 @@ const styles = StyleSheet.create({
   },
   materialCheckboxWithLabel: {
     height: 40,
-    width: 75,
+    width: 0,
+    alignSelf: "flex-end",
     marginTop: 63,
-    marginLeft: 220
+    marginRight: 0,
+    marginLeft: 0
+    
+
   },
+
   image: {
     width: 274,
     height: 293,
@@ -83,6 +94,22 @@ const styles = StyleSheet.create({
   materialButtonViolet2: {
     height: 32,
     width: 110,
+    position: "absolute",
+    left: 0,
+    top: 0
+  },
+  button: {
+    top: 0,
+    left: 0,
+    width: 110,
+    height: 32,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
+  },
+  materialButtonViolet2Stack: {
+    width: 110,
+    height: 32,
     marginTop: -342,
     marginLeft: 35
   },
