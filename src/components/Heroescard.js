@@ -5,7 +5,7 @@ function Heroescard(props) {
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.body}></View>
-      <Text style={styles.ryanGosling}>Ryan Gosling</Text>
+      <Text style={styles.johnCena}>{props.johnCena || "John Cena"}</Text>
       <Text style={styles.saltlakeKolkata}>saltlake, kolkata</Text>
       <Text style={styles.b4}>B+</Text>
       <View style={styles.rect}></View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   body: {
     padding: 16
   },
-  ryanGosling: {
+  johnCena: {
     top: 18,
     left: 12,
     position: "absolute",

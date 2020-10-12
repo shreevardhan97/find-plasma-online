@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import MaterialButtonViolet2 from "../components/MaterialButtonViolet2";
 
 function WhyBecomeAHero(props) {
@@ -33,6 +33,10 @@ function WhyBecomeAHero(props) {
         <MaterialButtonViolet2
           style={styles.materialButtonViolet2}
         ></MaterialButtonViolet2>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("BecomeAHero")}
+          style={styles.button}
+        ></TouchableOpacity>
       </View>
     </View>
   );
@@ -99,6 +103,15 @@ const styles = StyleSheet.create({
     left: 0,
     top: 209,
     borderRadius: 100
+  },
+  button: {
+    top: 209,
+    left: 0,
+    width: 110,
+    height: 32,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
   },
   loremIpsum1Stack: {
     width: 270,

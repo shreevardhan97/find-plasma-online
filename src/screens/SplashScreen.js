@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: 166,
     height: 166,
     marginTop: 234,
-    marginLeft: 125
+    marginLeft: 97
   },
   group: {
     width: 183,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   plasma: {
     top: 0,
-    left: 51,
+    left: 64,
     position: "absolute",
     fontFamily: "roboto-900",
     color: "rgba(21,0,53,1)",
@@ -59,8 +59,7 @@ const styles = StyleSheet.create({
   },
   findStack: {
     width: 184,
-    height: 40,
-    marginLeft: 50
+    height: 40
   },
   helpSaveLives: {
     fontFamily: "roboto-regular",
@@ -68,8 +67,7 @@ const styles = StyleSheet.create({
     height: 17,
     width: 360,
     textAlign: "center",
-    marginTop: 6,
-    marginLeft: 25
+    marginTop: 6
   }
 });
 

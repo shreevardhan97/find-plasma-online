@@ -43,9 +43,6 @@ const StackNavigation = createStackNavigator(
   },
   {
     headerMode: "none"
-  },
-  {
-    initialRouteName: "Onboard1"
   }
 );
 
@@ -68,9 +65,9 @@ function App() {
 async function loadResourcesAsync() {
   await Promise.all([
     Font.loadAsync({
+      "roboto-500": require("./src/assets/fonts/roboto-500.ttf"),
       "roboto-700": require("./src/assets/fonts/roboto-700.ttf"),
       "roboto-regular": require("./src/assets/fonts/roboto-regular.ttf"),
-      "roboto-500": require("./src/assets/fonts/roboto-500.ttf"),
       "roboto-900": require("./src/assets/fonts/roboto-900.ttf")
     })
   ]);

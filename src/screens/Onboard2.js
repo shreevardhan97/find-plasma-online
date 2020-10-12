@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Image } from "react-native";
 import Next1 from "../components/Next1";
 
 function Onboard2(props) {
@@ -22,7 +22,13 @@ function Onboard2(props) {
           <Text style={styles.logIn}>Log in</Text>
         </View>
       </View>
-      <Next1 style={styles.login1_button}></Next1>
+      <View style={styles.login1_buttonStack}>
+        <Next1 style={styles.login1_button}></Next1>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Onboard3")}
+          style={styles.button2}
+        ></TouchableOpacity>
+      </View>
       <Image
         source={require("../assets/images/individual.png")}
         resizeMode="contain"
@@ -43,8 +49,7 @@ const styles = StyleSheet.create({
     height: 34,
     width: 360,
     textAlign: "center",
-    marginTop: 446,
-    marginLeft: 25
+    marginTop: 446
   },
   group1: {
     width: 183,
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
   },
   request: {
     top: 0,
-    left: 63,
+    left: 78,
     position: "absolute",
     fontFamily: "roboto-900",
     color: "rgba(21,0,53,1)",
@@ -79,15 +84,14 @@ const styles = StyleSheet.create({
   },
   sendStack: {
     width: 205,
-    height: 40,
-    marginLeft: 50
+    height: 40
   },
   group2: {
     width: 161,
     height: 17,
     flexDirection: "row",
     marginTop: 130,
-    marginLeft: 120
+    marginLeft: 98
   },
   alreadyAMember: {
     fontFamily: "roboto-regular",
@@ -107,14 +111,30 @@ const styles = StyleSheet.create({
   login1_button: {
     height: 48,
     width: 206,
+    position: "absolute",
+    top: 0,
+    left: 0
+  },
+  button2: {
+    top: 0,
+    left: 0,
+    width: 206,
+    height: 48,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    opacity: 0
+  },
+  login1_buttonStack: {
+    width: 206,
+    height: 48,
     marginTop: -72,
-    marginLeft: 100
+    marginLeft: 77
   },
   image: {
     width: 200,
     height: 200,
     marginTop: -372,
-    marginLeft: 120
+    marginLeft: 80
   }
 });
 

@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@builderx/utils": "~0.1.7",
-    "@react-navigation/native": "^5.7.6",
-    "@react-navigation/stack": "^5.9.3",
     "expo": "^39.0.0",
     "expo-font": "~8.3.0",
     "lodash": "~4.17.4",
@@ -26,9 +24,7 @@
     "react-native-web-maps": "^0.2.0",
     "react-navigation": "4.0.10",
     "react-navigation-drawer": "~2.3.3",
-    "react-navigation-stack": "~1.10.3",
-    "react-native-safe-area-context": "3.1.4",
-    "@react-native-community/masked-view": "0.1.10"
+    "react-navigation-stack": "~1.10.3"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.0.0",
